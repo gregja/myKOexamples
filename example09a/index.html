@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Creating Custom Bindings</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="liveExample" class="liveExample">
+<!--            <form data-bind="submit: add">
+                <input placeholder="New Word" data-bind="value: newWord" autofocus />
+            </form>-->
+            <div data-bind='component: "word-editor"'></div>
+            <ul id="word-list" 
+                data-bind="template: { name: 'word-item-tmpl', 
+                                        foreach: words, 
+                                        afterAdd: wordAdded }">
+            </ul>
+        </div>
+        <script id="word-item-tmpl" type="text/html">
+            <li class="word" data-bind="text: $data"></li>
+        </script>        
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

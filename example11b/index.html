@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-framework="knockoutjs">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Intro</title>
+        <style>
+            .error {color: red;}
+            .error input { border: 1px solid red;}
+        </style>
+    </head>
+    <body>
+        <div>
+            <p data-bind="css: {error: firstName.hasError}"> 
+                <span>First Name</span>
+                <input data-bind="value: firstName, valueUpdate: 'afterkeydown' "/>
+                <span data-bind="visible: firstName.hasError, text: firstName.validationMessage"/>
+            </p>
+            <p> 
+                <span>Last Name</span>
+                <input type="text" data-bind="value: lastName,valueUpdate: 'afterkeydown'"/>
+            </p>
+
+            <div data-bind="text: fullName"/>
+
+        </div>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-framework="knockoutjs">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Creating Custom Bindings</title>
+        <script src="jquery-3.3.1.js" type="text/javascript"></script>       
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div>
+            <h3 data-bind="text: question"></h3>
+            <p>Please distribute <b data-bind="text: pointsBudget"></b> points between the following options.</p>
+
+            <table>
+                <thead><tr><th>Option</th><th>Importance</th></tr></thead>
+                <tbody data-bind="foreach: answers">
+                    <tr>
+                        <td data-bind="text: answerText"></td>
+                        <!--<td><select data-bind="options: [1,2,3,4,5], value: points"></select></td>-->
+                        <td data-bind="starRating: points"></td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <h3 data-bind="visible: pointsUsed() > pointsBudget">You've used too many points! Please remove some.</h3>
+            <!--<h3 data-bind="fadeVisible: pointsUsed() > pointsBudget">You've used too many points! Please remove some.</h3>-->
+            
+            <p>You've got <b data-bind="text: pointsBudget - pointsUsed()"></b> points left to use.</p>
+            <button data-bind="enable: pointsUsed() <= pointsBudget, click: save">Finished</button>          
+            <!--<button data-bind="jqButton: { enable: pointsUsed() <= pointsBudget }, click: save">Finished</button>-->
+
+            
+        </div>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

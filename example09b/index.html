@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Creating Custom Bindings</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <ul data-bind="foreach: products">
+            <li class="product">
+                <strong data-bind="text: name"></strong>
+                <like-widget params="value: userRating"></like-widget>
+            </li>
+        </ul>  
+        <button data-bind="click: addProduct">Add a product</button>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

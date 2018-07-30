@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Creating Custom Bindings</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <!-- http://stackoverflow.com/q/22721837/1090562 -->
+
+        <h1 data-bind="text: l().header"></h1>
+        <p data-bind="text: l().body"></p>
+
+        <button data-bind="click: change.bind($data, 'fr'), text: l().lang_fr"></button>
+        <button data-bind="click: change.bind($data, 'en'), text: l().lang_en"></button>
+        <button data-bind="click: change.bind($data, 'es'), text: l().lang_es"></button>
+        
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

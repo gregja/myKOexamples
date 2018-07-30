@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-framework="knockoutjs">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Creating Custom Bindings</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <table border="1" cellpadding="2">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Book</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: books">
+                <tr>
+                    <td data-bind="text: $index() + 1"></td>
+                    <td data-bind="text: $data.title"></td>
+                    <td>
+                        <input type="button" data-bind="click: $parent.addToCart" 
+                               value="Add to Cart" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

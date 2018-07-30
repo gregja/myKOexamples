@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Creating Custom Bindings</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h4>First instance, without parameters</h4>
+        <div data-bind='component: "message-editor"'></div>
+
+        <h4>Second instance, passing parameters</h4>
+        <div data-bind='component: {
+            name: "message-editor",
+            params: { initialText: "Hello, world!" }
+        }'></div>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

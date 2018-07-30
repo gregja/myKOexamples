@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" data-framework="knockoutjs">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Intro (observable array)</title>
+    </head>
+    <body>
+        <div>
+            <form data-bind="submit: addItem">
+                New item:
+                <input data-bind='value: itemToAdd, valueUpdate: "afterkeydown"' />
+                <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+                <p>Your items:</p>
+                <select multiple="multiple" width="50" data-bind="options: items"> </select>
+            </form>
+        </div>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

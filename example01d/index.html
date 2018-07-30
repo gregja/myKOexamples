@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Miniliste</title>
+    </head>
+    <body>
+        <div>
+            <!-- cette div contiendra le code HTML relatif à chaque test -->
+            <h2>Miniliste</h2>
+            <form data-bind="submit:  capitalizeNames">
+                <p><label>Prénom : <input data-bind="value: firstName" /></label></p>
+                <p><label>Nom: <input data-bind="value: lastName" /></label></p>
+                <p>Nom complet: <strong data-bind="text: fullName" ></strong></p>
+
+                <button type="submit">Valider</button>
+            </form>
+            <table>
+                <thead><tr>
+                    <th>Id</th><th>Nom et prénom</th><th>Action</th>
+                </tr></thead>
+                <tbody data-bind="foreach: names">
+                    <tr>
+                        <td data-bind="text: ($index() + 1)"></td>
+                        <td data-bind="text: $data.nom+' '+$data.prenom"></td>
+                        <td><a href="#" data-bind="click: $parent.removeName">Supprimer</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Nombre d'inscrits : <span data-bind="text: names().length"</span></p>
+        </div>
+        <!-- Placer le chargement de KO vers la fin du "body" -->
+        <script src="../knockout-min.js"></script>
+        <!-- Placer le code JS spécifique dans le fichier ci-dessous -->
+        <script src="app.js"></script>
+    </body>
+</html>

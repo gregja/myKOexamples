@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-framework="knockoutjs">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Intro</title>
+        <style>
+            .input-validation-error {
+                border-style:solid;
+                border-color:red;
+            }
+            .input-message-error {
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <!-- This is a *view* - HTML markup that defines the appearance of your UI -->
+            <form data-bind="submit: submitForm">
+
+            <p data-bind="css: { error: firstName.hasError }">
+                <input data-bind='value: firstName' />
+                <span data-bind='visible: firstName.hasError, 
+                                 text: firstName.validationMessage,
+                                 css: "input-message-error"'> </span>
+            </p>
+            <p data-bind="css: { error: lastName.hasError }">
+                <input data-bind='value: lastName' />
+                <span data-bind='visible: lastName.hasError, 
+                                 text: lastName.validationMessage,
+                                 css: "input-message-error"'> </span>
+            </p> 
+            <p><label>Number 1: <input data-bind='value: myNumberOne' /></label></p>
+            <p><label>Number 2: <input data-bind='value: myNumberTwo' /></label></p>
+            
+            <p><label>Montant 1: <input data-bind='value: amount1.formatted' /></label></p>
+            <p><label>Montant 2: <input data-bind='value: amount2.formatted' /></label></p>
+            <p><label>Montant 3: <input data-bind='value: amount3' /></label></p>
+            <p><label>Pourcentage: <input data-bind='value: percentage.formatted' /></label></p>
+            
+            <p><strong data-bind='text: one' /></strong></p>
+
+            <button type="submit">Go caps</button>
+            </form>
+        </div>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

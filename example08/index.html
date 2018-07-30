@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Creating Custom Bindings</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="liveExample" class="liveExample">
+            <p>
+             Choose a ticket class:
+             <select data-bind="options: tickets, 
+                                optionsCaption: 'Choose...',
+                                optionsText: 'name',
+                                value: chosenTicket"
+                                change: changeCoords></select>
+
+             <button data-bind="enable: chosenTicket, 
+                                click: resetTicket">Clear</button>
+             </p>                   
+             <p data-bind="with: chosenTicket">
+                 You have chosen <b data-bind="text: name+' ('+code+')'"></b>
+                 ($<span data-bind="text: price"></span>)    
+             </p>
+        </div>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

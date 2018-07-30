@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" data-framework="knockoutjs">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Creating Custom Bindings</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <!-- ko foreach: items -->
+        <p>
+            &nbsp;+&nbsp;
+            <span data-bind="text: $index() + 1"></span>
+            &nbsp;-&nbsp;
+            <span data-bind="text: $data.title"></span>
+        </p>
+        <!-- /ko -->
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

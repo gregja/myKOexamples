@@ -1,0 +1,29 @@
+#word-list .word {
+    list-style: none;
+    margin: 3px;
+    padding: 7px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-shadow: 2px 2px 2px #000;
+    border: solid 1px #fff;
+    font-size: x-large;
+}
+
+#word-list .word:nth-child(1n) {
+    background-color: #12ab23;    
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#14BD27), to(#0D7819));
+    background-image: -moz-linear-gradient(top center, #14BD27, #0D7819);  
+}
+
+#word-list .word:nth-child(2n) {
+     background-color: #F7810E;    
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F7810E), to(#964F09));
+    background-image: -moz-linear-gradient(top center, #F7810E, #964F09); 
+}
+
+#word-list .word:nth-child(3n) {
+    background-color: #5026B8;     
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6E35FF), to(#2D1669));
+    background-image: -moz-linear-gradient(top center, #6E35FF, #2D1669);   
+}

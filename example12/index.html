@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-framework="knockoutjs">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - Intro</title>
+        <style>
+            .error {color: red;}
+            .error input { border: 1px solid red;}
+        </style>
+    </head>
+    <body>
+        <table data-bind="foreach: items" style="position:fixed; top:6em">
+           <tr>
+              <td data-bind="text: Col1"/>
+              <td data-bind="text: Col2"/>
+              <td data-bind="text: Col3"/>
+              <td data-bind="text: Col4"/>
+              <td data-bind="text: Col5"/>
+              <td data-bind="text: Col6"/>
+              <td data-bind="text: Col7"/>
+              <td data-bind="text: Col8"/>
+              <td data-bind="text: Col9"/>
+              <td data-bind="text: Col10"/>
+              <td data-bind="text: Col11"/>
+              <td data-bind="text: Col12"/>
+           </tr>
+        </table>
+        <div style="position:fixed; top:1em;">
+        <b>Knockout native templating</b><br/>
+           1000 rows and 12 columns<br/>
+           Load and DOM manipulation time: ~<span data-bind='text: new Date().getTime() - startTime'></span> ms
+        </div>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

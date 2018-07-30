@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-framework="knockoutjs">
+    <head>
+        <meta charset="utf-8">
+        <title>Knockout.js - minicalc</title>
+    </head>
+    <body>
+        <script id="total-template" type="text/html">
+        <div>
+            <form data-bind="submit: dblAmount">
+                Montant : <span data-bind="text: amount"></span>
+                <button type="submit">Calc</button>
+            </form>
+            Grand Total : <span data-bind="text: grandTotal"></span>
+        </div>
+        </script>
+
+        <div data-bind="template: 'total-template'"></div>
+        <script src="../knockout-min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
