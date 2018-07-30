@@ -1,0 +1,20 @@
+{
+  "name": "myKOexamples",
+  "version": "1.0.0",
+  "description": "Knockout examples ----",
+  "main": "knockout-min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregja/myKOexamples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregja/myKOexamples/issues"
+  },
+  "homepage": "https://github.com/gregja/myKOexamples#readme"
+}
